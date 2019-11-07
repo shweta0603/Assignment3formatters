@@ -1,0 +1,42 @@
+<mvc:View controllerName="assign03.Assignment03.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<Table id="tbInvoice" items="{/DATA}" class="withGrid" noDataText="{i18n>noDataText}">
+							<columns>
+								<Column id="clmInvNo" hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+									<Text text="{i18n>clmTitleID}" class="textColor" tooltip="{i18n>tooltipTitleSadad}"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>clmTitleNAME}" class="textColor" tooltip="{i18n>tooltipTitleSadad}"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>clmTitleDATE}" class="textColor" tooltip="{i18n>tooltipTitleSadad}"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>clmTitleProfile}" class="textColor" tooltip="{i18n>tooltipTitleSadad}"></Text>
+								</Column>
+								<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true">
+									<Text text="{i18n>clmTitleManager}" class="textColor" tooltip="{i18n>tooltipTitleSadad}"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem vAlign="Middle">
+									<cells>
+										<Text text="{EMP ID}" wrapping="true"></Text>
+										<Text text="{EMP NAME}" wrapping="true"></Text>
+                                       <Text text="{path: 'DATE' , formatter:'.test.fnOnFormatDate'}" wrapping="true"></Text>
+										<Text text="{path : 'PROFILE' , formatter:'.test.fnReturnStatus'}" wrapping="true"></Text>
+										<Text text="{MANAGER}" wrapping="true"></Text>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
